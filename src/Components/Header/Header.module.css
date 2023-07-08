@@ -1,0 +1,15 @@
+@import url("../../index.css");
+
+.Header {
+  background: var(--color-gradient-btn);
+  width: 100vw;
+  height: 56px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (min-width: 768px) {
+  .Header {
+    height: 72px;
+  }
+}

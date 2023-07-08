@@ -1,33 +1,44 @@
-import { useState } from "react";
+import Layout from "./Components/Layout/Layout";
+import Contacts from "./pages/ContactsPage/ContactsPage";
+import Home from "./pages/HomePage/HomePage";
 
-import "./App.css";
-import { NavLink, Outlet } from "react-router-dom";
+import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
-function App() {
-  const [count, setCount] = useState(0);
+const App = () => {
+  const router = createBrowserRouter([
+    {
+      path: "/cosmetics_shop_vite/",
+      element: <Layout />,
+      children: [
+        {
+          path: "/cosmetics_shop_vite/",
+          element: <Home />,
+        },
+        {
+          path: "contacts",
+          element: <Contacts />,
+        },
 
+        {
+          path: "*",
+          element: <div>Помилка</div>,
+        },
+      ],
+    },
+    // {
+    //   path: "/login",
+    //   element: <Login />,
+    // },
+    // {
+    //   path: "/register",
+    //   element: <Register />,
+    // },
+  ]);
   return (
     <>
-      <div></div>
-      <h1>Vite + React</h1>
-      <nav>
-        <NavLink to="/cosmetics_shop_vite/">Home</NavLink> {"|"}
-        <NavLink to="/cosmetics_shop_vite/contacts">Contacts</NavLink>
-      </nav>
-      <Outlet />
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <RouterProvider router={router} />
     </>
   );
-}
+};
 
 export default App;
