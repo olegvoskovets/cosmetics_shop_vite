@@ -2,7 +2,11 @@ import Layout from "./Components/Layout/Layout";
 import Contacts from "./pages/ContactsPage/ContactsPage";
 import Home from "./pages/HomePage/HomePage";
 
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import {
+  Navigate,
+  RouterProvider,
+  createBrowserRouter,
+} from "react-router-dom";
 
 const App = () => {
   const router = createBrowserRouter([
@@ -21,7 +25,7 @@ const App = () => {
 
         {
           path: "*",
-          element: <div>Помилка</div>,
+          element: <Navigate to="/cosmetics_shop_vite/" />,
         },
       ],
     },

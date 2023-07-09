@@ -20,6 +20,7 @@ body {
     #fcd9dc.46%,
     #f8c0c3 90.54%
   );
+  --btn-hover: #f8a0a4;
   --color-purple-gradient-some: #4b1e7c;
   --color-blue-gradient-some: #302e8e;
   --color-yellow: #ffb627;
@@ -120,8 +121,8 @@ button {
 /* десктоп */
 
 @media screen and (min-width: 1280px) {
-  /* .container {
+  .container {
     width: 1248px;
     padding: 0 16px;
-  } */
+  }
 }
