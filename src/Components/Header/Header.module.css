@@ -4,9 +4,31 @@
   height: 156px;
 }
 .top_header {
-  height: 20px;
-  background: #f7b2b5;
+  /* height: 20px; */
+  background: var(--color-dashboard-header);
 }
+.top_header_content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav_link {
+  color: #fff;
+  font-size: 12px;
+  line-height: 1.66;
+}
+.nav_link_span {
+  color: #fff;
+  font-size: 12px;
+  line-height: 1.66;
+}
+.top_header_left {
+  display: flex;
+  gap: 25px;
+}
+/* .active {
+  color: #0a69e6;
+} */
 @media screen and (min-width: 768px) {
   .header {
     height: 192px;

@@ -1,6 +1,12 @@
+import Example from "./Components/Example/Example";
 import Layout from "./Components/Layout/Layout";
-import Contacts from "./pages/ContactsPage/ContactsPage";
-import Home from "./pages/HomePage/HomePage";
+import AboutPage from "./pages/AboutPage/AboutPage";
+import ActionPage from "./pages/ActionPage/ActionPage";
+import BlogPage from "./pages/BlogPage/BlogPage";
+import ContactsPage from "./pages/ContactsPage/ContactsPage";
+
+import DeliveryPage from "./pages/DeliveryPage/DeliveryPage";
+import HomePage from "./pages/HomePage/HomePage";
 
 import {
   Navigate,
@@ -16,13 +22,28 @@ const App = () => {
       children: [
         {
           path: "/cosmetics_shop_vite/",
-          element: <Home />,
+          element: <HomePage />,
         },
         {
           path: "contacts",
-          element: <Contacts />,
+          element: <ContactsPage />,
         },
-
+        {
+          path: "delivery",
+          element: <DeliveryPage />,
+        },
+        {
+          path: "action",
+          element: <ActionPage />,
+        },
+        {
+          path: "about",
+          element: <AboutPage />,
+        },
+        {
+          path: "blog",
+          element: <BlogPage />,
+        },
         {
           path: "*",
           element: <Navigate to="/cosmetics_shop_vite/" />,
@@ -40,7 +61,9 @@ const App = () => {
   ]);
   return (
     <>
-      <RouterProvider router={router} />
+      <Example>
+        <RouterProvider router={router} />
+      </Example>
     </>
   );
 };
