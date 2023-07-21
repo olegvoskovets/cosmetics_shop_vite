@@ -1,6 +1,19 @@
 @import url("../../index.css");
 
-.Header {
+.header {
+  height: 156px;
+}
+.top_header {
+  height: 20px;
+  background: #f7b2b5;
+}
+@media screen and (min-width: 768px) {
+  .header {
+    height: 192px;
+  }
+}
+
+/* .Header {
   background: var(--color-gradient-btn);
   width: 100vw;
   height: 56px;
@@ -35,6 +48,7 @@
   height: 24px;
 }
 .search {
+  position: relative;
   display: flex;
   align-items: center;
   gap: 10px;
@@ -51,6 +65,10 @@
   color: themed("textColor");
 }
 .search_Btn {
+  position: absolute;
+  height: 32px;
+  top: 0;
+  right: 0;
   background: #f7b2b5;
   border: none;
   border-radius: 3px;
@@ -87,4 +105,4 @@
   .Header {
     height: 72px;
   }
-}
+} */
