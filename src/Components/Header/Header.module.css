@@ -38,21 +38,25 @@
 .logo_content {
   color: var(--color-dashboard-header);
   text-transform: uppercase;
+  position: relative;
 }
 .top_logo {
-  font-size: 44px;
+  font-size: 32px;
   line-height: 1;
   display: flex;
   align-items: center;
 }
 .button_logo {
-  font-size: 10px;
-  display: flex;
-  justify-content: end;
+  font-weight: 500;
+  font-size: 8px;
+  position: absolute;
+  right: 0;
+}
+.discover {
+  letter-spacing: 2px;
 }
 .search_block {
-  width: 400px;
-  padding: 7px 0;
+  width: 480px;
 }
 .search {
   width: 100%;
@@ -91,8 +95,8 @@
   top: 0;
   right: 0;
 }
-.btn_block {
-  padding: 7px 0;
+.btn_section {
+  display: flex;
 }
 .profile_btn,
 .favorite_btn,
@@ -105,8 +109,8 @@
   background: transparent;
 }
 .profile_user_icon {
-  width: 30px;
-  height: 30px;
+  width: 24px;
+  height: 24px;
   color: var(--color-dashboard-header);
 }
 

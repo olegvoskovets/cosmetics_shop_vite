@@ -1,4 +1,4 @@
-import { CiShoppingBasket } from "react-icons/ci";
+import { BsBasket3 } from "react-icons/bs";
 import { GiSpartanHelmet } from "react-icons/gi";
 import { GoSearch } from "react-icons/go";
 import { BiUser } from "react-icons/bi";
@@ -21,7 +21,7 @@ const Header = () => {
               <Link to="delivery" className={css.nav_link}>
                 <span>Безкоштовна доставка по Україні</span>
               </Link>
-              {!viewport?.mobile && (
+              {!viewport.mobile && (
                 <>
                   <Link to="action" className={css.nav_link}>
                     <span>Акції</span>
@@ -52,35 +52,39 @@ const Header = () => {
                   <span>sevastyan</span>
                 </div>
                 <div className={css.button_logo}>
-                  <span>discover beauty</span>
+                  <span className={css.discover}>discover beauty</span>
                 </div>
               </div>
             </Link>
-            <div className={css.search_block}>
-              <div className={css.search_container}>
-                <input className={css.search} type="text" />
-                <button className={css.search_icon_btn}>
-                  <GoSearch />
+            {viewport.desktop && (
+              <div className={css.search_block}>
+                <div className={css.search_container}>
+                  <input className={css.search} type="text" />
+                  <button className={css.search_icon_btn}>
+                    <GoSearch />
+                  </button>
+                </div>
+              </div>
+            )}
+            <div className={css.btn_section}>
+              <div className={css.btn_block}>
+                <button className={css.profile_btn}>
+                  <BiUser className={css.profile_user_icon} />
+                  {!viewport.mobile && <span>Вхід до кабінету</span>}
                 </button>
               </div>
-            </div>
-            <div className={css.btn_block}>
-              <button className={css.profile_btn}>
-                <BiUser className={css.profile_user_icon} />
-                <span>Вхід до кабінету</span>
-              </button>
-            </div>
-            <div className={css.btn_block}>
-              <button className={css.favorite_btn}>
-                <MdOutlineFavoriteBorder className={css.profile_user_icon} />
-                <span>Обране</span>
-              </button>
-            </div>
-            <div className={css.btn_block}>
-              <button className={css.basket_btn}>
-                <CiShoppingBasket className={css.profile_user_icon} />
-                <span>Кошик</span>
-              </button>
+              <div className={css.btn_block}>
+                <button className={css.favorite_btn}>
+                  <MdOutlineFavoriteBorder className={css.profile_user_icon} />
+                  {!viewport.mobile && <span>Обране</span>}
+                </button>
+              </div>
+              <div className={css.btn_block}>
+                <button className={css.basket_btn}>
+                  <BsBasket3 className={css.profile_user_icon} />
+                  {!viewport.mobile && <span>Кошик</span>}
+                </button>
+              </div>
             </div>
           </div>
         </div>
