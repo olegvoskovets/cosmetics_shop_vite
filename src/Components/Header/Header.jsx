@@ -1,11 +1,8 @@
-// import { NavLink } from "react-router-dom";
-// import { BsTelephone } from "react-icons/bs";
-// import { AiOutlineMenu } from "react-icons/ai";
-// import { TbCategory } from "react-icons/tb";
-// import { AiOutlineSearch } from "react-icons/ai";
-// import { BiUser } from "react-icons/bi";
-// import { SlBasket } from "react-icons/sl";
-
+import { CiShoppingBasket } from "react-icons/ci";
+import { GiSpartanHelmet } from "react-icons/gi";
+import { GoSearch } from "react-icons/go";
+import { BiUser } from "react-icons/bi";
+import { MdOutlineFavoriteBorder } from "react-icons/md";
 import { Link } from "react-router-dom";
 import css from "./Header.module.css";
 import { useSelector } from "react-redux";
@@ -45,43 +42,52 @@ const Header = () => {
           </div>
         </div>
       </section>
-      <section className={css.middle_header}></section>
+      <section className={css.middle_header}>
+        <div className="container">
+          <div className={css.middle_header_position}>
+            <Link className={css.link_logo} to="/cosmetics_shop_vite/">
+              <div className={css.logo_content}>
+                <div className={css.top_logo}>
+                  <GiSpartanHelmet />
+                  <span>sevastyan</span>
+                </div>
+                <div className={css.button_logo}>
+                  <span>discover beauty</span>
+                </div>
+              </div>
+            </Link>
+            <div className={css.search_block}>
+              <div className={css.search_container}>
+                <input className={css.search} type="text" />
+                <button className={css.search_icon_btn}>
+                  <GoSearch />
+                </button>
+              </div>
+            </div>
+            <div className={css.btn_block}>
+              <button className={css.profile_btn}>
+                <BiUser className={css.profile_user_icon} />
+                <span>Вхід до кабінету</span>
+              </button>
+            </div>
+            <div className={css.btn_block}>
+              <button className={css.favorite_btn}>
+                <MdOutlineFavoriteBorder className={css.profile_user_icon} />
+                <span>Обране</span>
+              </button>
+            </div>
+            <div className={css.btn_block}>
+              <button className={css.basket_btn}>
+                <CiShoppingBasket className={css.profile_user_icon} />
+                <span>Кошик</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
       <section className={css.menu_header}></section>
       <section className={css.button_header}></section>
     </header>
-    // <section className={css.Header}>
-    //   <div className="container">
-    //     <div className={css.headerContent}>
-    //       <span className={css.span_icon}>
-    //         <AiOutlineMenu className={css.header_menu} />
-    //       </span>
-
-    //       <Logo />
-    //       <button className={css.btnCatalog} type="button">
-    //         <TbCategory className={css.TbCategory} />
-    //         <span>Каталог</span>
-    //       </button>
-    //       <div className={css.search}>
-    //         <AiOutlineSearch />
-    //         <input
-    //           className={css.search_Input}
-    //           type="text"
-    //           placeholder="Я шукаю ..."
-    //         />
-    //         <button className={css.search_Btn}>Знайти</button>
-    //       </div>
-    //       <BsTelephone />
-    //       <Link to="/cosmetics_shop_vite/">Home</Link>
-    //       <NavLink to="contacts">Contacts</NavLink>
-    //       <span className={css.span_icon}>
-    //         <BiUser className={css.biUser_icon} />
-    //       </span>
-    //       <span className={css.span_icon}>
-    //         <SlBasket className={css.slBasket} />
-    //       </span>
-    //     </div>
-    //   </div>
-    // </section>
   );
 };
 
