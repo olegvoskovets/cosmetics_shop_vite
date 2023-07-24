@@ -1,4 +1,6 @@
-import { BsBasket3 } from "react-icons/bs";
+// import { BsBasket3 } from "react-icons/bs";
+import { HiOutlineShoppingBag } from "react-icons/hi";
+
 import { GiSpartanHelmet } from "react-icons/gi";
 import { GoSearch } from "react-icons/go";
 import { BiUser } from "react-icons/bi";
@@ -7,11 +9,11 @@ import { Link } from "react-router-dom";
 import css from "./Header.module.css";
 import { useSelector } from "react-redux";
 import { selectViewPort } from "../../redux/Viewport/viewportSelectors";
-// import Logo from "../Logo/Logo";
+import Menu from "../Menu/Menu";
 
 const Header = () => {
   const viewport = useSelector(selectViewPort);
-
+  // console.log("menu ", menu);
   return (
     <header className={css.header}>
       <section className={css.top_header}>
@@ -21,7 +23,7 @@ const Header = () => {
               <Link to="delivery" className={css.nav_link}>
                 <span>Безкоштовна доставка по Україні</span>
               </Link>
-              {!viewport.mobile && (
+              {!viewport?.mobile && (
                 <>
                   <Link to="action" className={css.nav_link}>
                     <span>Акції</span>
@@ -56,7 +58,7 @@ const Header = () => {
                 </div>
               </div>
             </Link>
-            {viewport.desktop && (
+            {viewport?.desktop && (
               <div className={css.search_block}>
                 <div className={css.search_container}>
                   <input className={css.search} type="text" />
@@ -81,7 +83,8 @@ const Header = () => {
               </div>
               <div className={css.btn_block}>
                 <button className={css.basket_btn}>
-                  <BsBasket3 className={css.profile_user_icon} />
+                  {/* <BsBasket3 className={css.profile_user_icon} /> */}
+                  <HiOutlineShoppingBag className={css.profile_user_icon} />
                   {!viewport.mobile && <span>Кошик</span>}
                 </button>
               </div>
@@ -89,7 +92,12 @@ const Header = () => {
           </div>
         </div>
       </section>
-      <section className={css.menu_header}></section>
+
+      <section className={css.menu_header}>
+        <div className="container">
+          <Menu />
+        </div>
+      </section>
       <section className={css.button_header}></section>
     </header>
   );
