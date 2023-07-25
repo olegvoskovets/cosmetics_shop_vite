@@ -20,7 +20,7 @@ const Menu = () => {
       )}
       <div className={css.menu_btn}>
         {!viewport.desktop && <BurgerMenu />}
-        <HeaderButton />
+        {!viewport.mobile && <HeaderButton />}
         {!viewport.desktop && <SearchBtn />}
       </div>
     </>

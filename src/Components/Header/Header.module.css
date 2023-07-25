@@ -114,20 +114,18 @@
   height: 24px;
   color: var(--color-dashboard-header);
 }
-.button_header_position {
+/* .button_header_position {
   padding: 12px 0;
   display: flex;
   justify-content: center;
   gap: 10px;
 }
-/* .header_button_section {
-  background: var(--color-dashboard-header);
-} */
+
 .header_btn_position {
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
+} */
 .menu_header {
   color: white;
 }

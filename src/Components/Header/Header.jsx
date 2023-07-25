@@ -85,7 +85,6 @@ const Header = () => {
               </div>
               <div className={css.btn_block}>
                 <button className={css.basket_btn}>
-                  {/* <BsBasket3 className={css.profile_user_icon} /> */}
                   <HiOutlineShoppingBag className={css.profile_user_icon} />
                   {!viewport.mobile && <span>Кошик</span>}
                 </button>
