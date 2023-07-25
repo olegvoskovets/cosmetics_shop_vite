@@ -1,0 +1,17 @@
+.burger_btn {
+  height: 30px;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: transparent;
+  color: white;
+}
+.burger_icons {
+  width: 28px;
+  height: 28px;
+}
+.burger_text {
+  font-size: 14px;
+}

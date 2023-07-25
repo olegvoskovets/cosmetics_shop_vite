@@ -7,7 +7,8 @@ body {
 }
 
 :root {
-  --color-dashboard-header: #ff868d;
+  --color-dashboard-header: #fa5d65;
+  --color-main-header: #ff868d;
   /* ================================== */
   --color-gradient-btn: linear-gradient(
     190deg,

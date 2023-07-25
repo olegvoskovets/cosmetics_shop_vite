@@ -1,4 +1,3 @@
-// import { BsBasket3 } from "react-icons/bs";
 import { HiOutlineShoppingBag } from "react-icons/hi";
 
 import { GiSpartanHelmet } from "react-icons/gi";
@@ -10,6 +9,9 @@ import css from "./Header.module.css";
 import { useSelector } from "react-redux";
 import { selectViewPort } from "../../redux/Viewport/viewportSelectors";
 import Menu from "../Menu/Menu";
+// import HeaderButton from "../HeaderButton/HeaderButton";
+// import BurgerMenu from "../BurgerMenu/BurgerMenu";
+// import SearchBtn from "../SearchBtn/SearchBtn";
 
 const Header = () => {
   const viewport = useSelector(selectViewPort);
@@ -92,13 +94,35 @@ const Header = () => {
           </div>
         </div>
       </section>
-
       <section className={css.menu_header}>
         <div className="container">
           <Menu />
         </div>
       </section>
-      <section className={css.button_header}></section>
+      {/* {viewport.desktop ? (
+        <>
+          <section className={css.menu_header}>
+            <div className="container">
+              <Menu />
+            </div>
+          </section>
+          <section className={css.button_header}>
+            <div className="container">
+              <HeaderButton />
+            </div>
+          </section>
+        </>
+      ) : (
+        <section className={css.header_button_section}>
+          <div className="container">
+            <div className={css.header_btn_position}>
+              <BurgerMenu />
+              <HeaderButton />
+              <SearchBtn />
+            </div>
+          </div>
+        </section>
+      )} */}
     </header>
   );
 };

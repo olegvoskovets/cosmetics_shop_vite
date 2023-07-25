@@ -1,0 +1,30 @@
+.button_header_position {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+.basket_btn {
+  height: 30px;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  border: none;
+  background: transparent;
+  color: currentColor;
+}
+.icon_header_btn {
+  width: 28px;
+  height: 28px;
+  color: currentColor;
+}
+.basket_btn {
+  font-size: 14px;
+}
+@media screen and (min-width: 1280px) {
+  .basket_btn {
+    color: var(--color-dashboard-header);
+  }
+  .btn_text {
+    color: #181717;
+  }
+}
