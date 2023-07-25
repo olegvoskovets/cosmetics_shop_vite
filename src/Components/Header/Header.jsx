@@ -98,30 +98,6 @@ const Header = () => {
           <Menu />
         </div>
       </section>
-      {/* {viewport.desktop ? (
-        <>
-          <section className={css.menu_header}>
-            <div className="container">
-              <Menu />
-            </div>
-          </section>
-          <section className={css.button_header}>
-            <div className="container">
-              <HeaderButton />
-            </div>
-          </section>
-        </>
-      ) : (
-        <section className={css.header_button_section}>
-          <div className="container">
-            <div className={css.header_btn_position}>
-              <BurgerMenu />
-              <HeaderButton />
-              <SearchBtn />
-            </div>
-          </div>
-        </section>
-      )} */}
     </header>
   );
 };

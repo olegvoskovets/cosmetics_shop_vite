@@ -15,3 +15,9 @@
 .burger_text {
   font-size: 14px;
 }
+@media screen and (max-width: 768px) {
+  .burger_btn {
+    flex: 1;
+    border-right: 1px solid white;
+  }
+}

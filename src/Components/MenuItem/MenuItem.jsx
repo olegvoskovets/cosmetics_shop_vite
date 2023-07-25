@@ -5,7 +5,7 @@ import css from "./MenuItem.module.css";
 const MenuItem = ({ item }) => {
   return (
     <Link className={css.menu_item}>
-      <span>{item}</span>
+      <span onMouseEnter={() => console.log("item: ", item)}>{item}</span>
     </Link>
   );
 };
