@@ -2,6 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   openMenuDropDown: false,
+  menu: false,
 };
 
 export const menuDropDownSlice = createSlice({
@@ -11,8 +12,11 @@ export const menuDropDownSlice = createSlice({
     updateMenuDropDown: (state) => {
       state.openMenuDropDown = !state.openMenuDropDown;
     },
+    updateMenu: (state, { payload }) => {
+      state.menu = payload;
+    },
   },
 });
 
 export const menuDropDownReducer = menuDropDownSlice.reducer;
-export const { updateMenuDropDown } = menuDropDownSlice.actions;
+export const { updateMenuDropDown, updateMenu } = menuDropDownSlice.actions;

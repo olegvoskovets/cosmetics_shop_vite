@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-import menu from "../../data/menu.json";
+import category from "../../data/category.json";
 import MenuItem from "../MenuItem/MenuItem";
 import css from "./Menu.module.css";
 import { selectViewPort } from "../../redux/Viewport/viewportSelectors";
@@ -23,14 +23,14 @@ const Menu = () => {
   return (
     <>
       {viewport.desktop && (
-        <>
+        <div className={css.menu_dropDown_position}>
           <ul className={css.menu_list} onMouseEnter={hendleMenuDropDown}>
-            {menu.map((item) => (
+            {category.map((item) => (
               <MenuItem key={item} item={item} />
             ))}
           </ul>
           {openMenu && <MenuDropDown />}
-        </>
+        </div>
       )}
       <div className={css.menu_btn}>
         {!viewport.desktop && <BurgerMenu />}

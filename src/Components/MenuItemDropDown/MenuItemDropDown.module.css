@@ -1,0 +1,10 @@
+.menu_item_drop_drown {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.menu_Item_link {
+  font-size: 14px;
+  color: #212b36;
+}
