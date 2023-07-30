@@ -6,16 +6,27 @@ import { BiUser } from "react-icons/bi";
 import { MdOutlineFavoriteBorder } from "react-icons/md";
 import { Link } from "react-router-dom";
 import css from "./Header.module.css";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { selectViewPort } from "../../redux/Viewport/viewportSelectors";
 import Menu from "../Menu/Menu";
+import { updateMenuDropDown } from "../../redux/MenuDropDown/menuDropDownSlice";
+import { selectMenuDropDown } from "../../redux/MenuDropDown/menuDropDownSelectors";
 // import HeaderButton from "../HeaderButton/HeaderButton";
 // import BurgerMenu from "../BurgerMenu/BurgerMenu";
 // import SearchBtn from "../SearchBtn/SearchBtn";
 
 const Header = () => {
   const viewport = useSelector(selectViewPort);
-  // console.log("menu ", menu);
+  const dispatch = useDispatch();
+  const openMenu = useSelector(selectMenuDropDown);
+
+  const menuDropDownClose = () => {
+    
+    if (openMenu === true) {
+      dispatch(updateMenuDropDown());
+    }
+  };
+
   return (
     <header className={css.header}>
       <section className={css.top_header}>
@@ -93,7 +104,7 @@ const Header = () => {
           </div>
         </div>
       </section>
-      <section className={css.menu_header}>
+      <section className={css.menu_header} onMouseLeave={menuDropDownClose}>
         <div className="container">
           <Menu />
         </div>
