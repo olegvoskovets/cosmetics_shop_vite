@@ -1,0 +1,18 @@
+.slide_img {
+  width: 335px;
+}
+
+/* tablet */
+
+@media screen and (min-width: 768px) {
+  .slide_img {
+    width: 704px;
+  }
+}
+/* десктоп */
+
+@media screen and (min-width: 1280px) {
+  .slide_img {
+    width: 1248px;
+  }
+}

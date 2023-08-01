@@ -1,5 +1,7 @@
+import Slide from "../../Components/Slide/Slide";
+
 const HomePage = () => {
-  return <div>Home</div>;
+  return <Slide />;
 };
 
 export default HomePage;
